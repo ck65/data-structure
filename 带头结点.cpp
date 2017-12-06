@@ -9,14 +9,14 @@ typedef struct LNode
 }LNode,*LinkList;
 
 
-//¹¹ÔìÒ»¸ö¿ÕµÄÏßÐÔ±íL;
+//æž„é€ ä¸€ä¸ªç©ºçš„çº¿æ€§è¡¨L;
 void InitList_HL(LinkList &L)
 {
 	L->next=NULL;
 }
 
 
-//Ïú»ÙÏßÐÔ±íL;
+//é”€æ¯çº¿æ€§è¡¨L;
 void DestroyList_HL(LinkList &L)
 {
 	LNode *p;
@@ -29,7 +29,7 @@ void DestroyList_HL(LinkList &L)
 }
 
 
-//½«LÖØÖÃÎª¿Õ±í;
+//å°†Lé‡ç½®ä¸ºç©ºè¡¨;
 void ClearList_HL(LinkList &L)
 {
 	LNode *p;
@@ -44,7 +44,7 @@ void ClearList_HL(LinkList &L)
 }
 
 
-//ÅÐ¶ÏLÊÇ·ñÎª¿Õ;
+//åˆ¤æ–­Læ˜¯å¦ä¸ºç©º;
 bool ListEmpty_HL(LinkList L)
 {
 	if(L->next==NULL)
@@ -54,7 +54,7 @@ bool ListEmpty_HL(LinkList L)
 }
 
 
-//ÏßÐÔ±íLµÄ³¤¶È;
+//çº¿æ€§è¡¨Lçš„é•¿åº¦;
 int ListLength_HL(LinkList L)
 {
 	LinkList p=L->next;
@@ -68,7 +68,7 @@ int ListLength_HL(LinkList L)
 }
 
 
-//ÓÃe·µ»ØLÖÐµÚi¸öÔªËØµÄÖµ
+//ç”¨eè¿”å›žLä¸­ç¬¬iä¸ªå…ƒç´ çš„å€¼
 int GetElem_HL(LinkList L,int i,int &e)
 {
 	LinkList p=L->next;
@@ -81,7 +81,7 @@ int GetElem_HL(LinkList L,int i,int &e)
 }
 
 
-//·µ»ØLÖÐµÚ1¸öÆäÖµÓëeÏàµÈµÄÔªËØµÄÎ»Ðò,ÈôÕâÑùµÄÔªËØ²»´æÔÚ£¬Ôò·µ»ØÖµÎª0
+//è¿”å›žLä¸­ç¬¬1ä¸ªå…¶å€¼ä¸Žeç›¸ç­‰çš„å…ƒç´ çš„ä½åº,è‹¥è¿™æ ·çš„å…ƒç´ ä¸å­˜åœ¨ï¼Œåˆ™è¿”å›žå€¼ä¸º0
 LNode* LocateElem_HL(LinkList L,
                      int e)
 {
@@ -92,7 +92,7 @@ LNode* LocateElem_HL(LinkList L,
 }
 
 
-//ÓÃpre_e·µ»Øcur_eµÄÇ°Çý,Èô²Ù×÷Ê§°Ü£¬pre_eÎÞ¶¨Òå;
+//ç”¨pre_eè¿”å›žcur_eçš„å‰é©±,è‹¥æ“ä½œå¤±è´¥ï¼Œpre_eæ— å®šä¹‰;
 int PriorElem_HL(LinkList L,int cur_e,int &pre_e)
 {
 	LinkList p=L->next;
@@ -112,7 +112,7 @@ int PriorElem_HL(LinkList L,int cur_e,int &pre_e)
 }
 
 
-//ÓÃnext_e·µ»Øcur_eµÄºó¼Ì,Èô²Ù×÷Ê§°Ü£¬next_eÎÞ¶¨Òå;
+//ç”¨next_eè¿”å›žcur_eçš„åŽç»§,è‹¥æ“ä½œå¤±è´¥ï¼Œnext_eæ— å®šä¹‰;
 int NextElem_HL(LinkList L,int cur_e,int &next_e)
 {
 	LinkList p=L->next;
@@ -129,7 +129,7 @@ int NextElem_HL(LinkList L,int cur_e,int &next_e)
 }
 
 
-//ÔÚµÚp¸öÔªËØÖ®Ç°£¬²åÈëÐÂµÄÔªËØ;
+//åœ¨ç¬¬pä¸ªå…ƒç´ ä¹‹å‰ï¼Œæ’å…¥æ–°çš„å…ƒç´ ;
 void ListInsert_HL(LinkList &L,LNode *p,LNode *s)
 {
 	LNode *q;
@@ -149,7 +149,7 @@ void ListInsert_HL(LinkList &L,LNode *p,LNode *s)
 }
 
 
-//É¾³ýÄ³¸öÔªËØ;
+//åˆ é™¤æŸä¸ªå…ƒç´ ;
 void ListDelete_HL(LinkList &L,LNode *p,int &e)
 {
 	LNode *q;
@@ -168,7 +168,7 @@ void ListDelete_HL(LinkList &L,LNode *p,int &e)
 }
 
 
-//ÒÀ´ÎÊä³öLÖÐµÄÃ¿¸öÊý¾ÝÔªËØ£»
+//ä¾æ¬¡è¾“å‡ºLä¸­çš„æ¯ä¸ªæ•°æ®å…ƒç´ ï¼›
 void ListTraverse_HL(LinkList L)
 {
 	LinkList p=L->next;
