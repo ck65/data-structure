@@ -10,7 +10,7 @@ typedef struct Node
 }Node, *LinkList;
 
 
-//´´½¨¿ÕÁ´±í
+//åˆ›å»ºç©ºé“¾è¡¨
 void InitList_HL(LinkList &L)
 {
 	L->next=NULL;
@@ -18,7 +18,7 @@ void InitList_HL(LinkList &L)
 
 
 
-//ÔÚLºÍpÖ®¼ä²åÈës
+//åœ¨Lå’Œpä¹‹é—´æ’å…¥s
 void ListInsert_HL(LinkList &L,Node *p,Node *s)
 {
 	Node *q;
@@ -36,11 +36,11 @@ void ListInsert_HL(LinkList &L,Node *p,Node *s)
 		s->next=p;
 	}
 }
-//´òÓ¡Á´±íÖÐµÄÊý¾Ý
+//æ‰“å°é“¾è¡¨ä¸­çš„æ•°æ®
 void print(LinkList pL)
 {
     if(!pL)
-      printf("¿Õ!");
+      printf("ç©º!");
     else
     {
         while(pL)
@@ -51,7 +51,7 @@ void print(LinkList pL)
     }
     printf("\n");
 }
-//Á´±í³¤¶È
+//é“¾è¡¨é•¿åº¦
 int ListLength(LinkList L)
 {
     LinkList p=L;
@@ -64,14 +64,14 @@ int ListLength(LinkList L)
     return t;
 }
 
-//²éÕÒ
+//æŸ¥æ‰¾
 LinkList LocateElem(LinkList L,int e)
 {
     LinkList p=L;
     while(p&&p->n!=e)p=p->next;
     return p;
 }
-//É¾³ý½Úµã
+//åˆ é™¤èŠ‚ç‚¹
 void ListDetele(LinkList &L,Node *p ,int &e)
 {
     if (p==L)
@@ -86,7 +86,7 @@ void ListDetele(LinkList &L,Node *p ,int &e)
     e=p->n;
     delete p;
 }
-//É¾³ýÁ´±í
+//åˆ é™¤é“¾è¡¨
 void delList(LinkList *pL)
 {
     Node *tmp;
@@ -101,7 +101,7 @@ void delList(LinkList *pL)
     *pL = NULL;
 }
 
-//ÅÐ¶Ï±í¿Õ
+//åˆ¤æ–­è¡¨ç©º
 int ListEmpty(LinkList L)
 {
     if(L->next==NULL)
