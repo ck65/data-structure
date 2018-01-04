@@ -37,16 +37,16 @@ void Preoder(BiTree T, void( *print)(BiTree)){
 
 void Preoder2(BiTree T, void( *print)(BiTree)){
 	if(T){
-		Preoder(T->lchild,print);
+		Preoder2(T->lchild,print);
 		print(T);
-		Preoder(T->rchild,print);
+		Preoder2(T->rchild,print);
 	}
 }
 
 void Preoder3(BiTree T, void( *print)(BiTree)){
 	if(T){
-		Preoder(T->lchild,print);
-		Preoder(T->rchild,print);
+		Preoder3(T->lchild,print);
+		Preoder3(T->rchild,print);
 		print(T);
 	}
 }
@@ -99,6 +99,7 @@ int main()
     Preoder3(T,print);
     printf("\n---------²ã´Î±éÀú---------\n");
     Preoder4(T,print);
+    destoryBiTree(T);
 
 	return 0;
 }
